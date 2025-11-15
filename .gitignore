@@ -1,0 +1,41 @@
+# -----------------------
+# Archivos de entorno
+# -----------------------
+.env
+
+# -----------------------
+# Archivos de sistema
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Composer (PHP)
+# -----------------------
+vendor/
+composer.lock
+
+# -----------------------
+# Node / Gulp / NPM
+# -----------------------
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# -----------------------
+# Archivos de build / output
+# -----------------------
+public/build/
+public/src/
+*.map
+
+# -----------------------
+# IDEs y editores
+# -----------------------
+.vscode/
+
+# -----------------------
+# Carpeta de backups o temporales
+# -----------------------
+*.bak
+*.tmp
