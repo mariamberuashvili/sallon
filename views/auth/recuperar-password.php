@@ -1,3 +1,5 @@
+<?php ob_start(); ?> 
+
 <h1 class="nombre-pagina">Recuperar Password</h1>
 <p class="descripcion-pagina">Nuevo password</p>
 
@@ -22,3 +24,7 @@ include_once __DIR__ . "/../templates/alertas.php";
     <a href="<?= $_ENV['APP_URL']; ?>">¿Ya tienes una cuenta? Inicia Sesión</a>
     <a href="crear-cuenta">Crear cuenta</a>
 </div>
+
+<?php $contenido = ob_get_clean(); ?> 
+
+<?php include_once __DIR__ . "/../layout.php"; ?>

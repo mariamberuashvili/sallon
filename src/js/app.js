@@ -114,12 +114,14 @@ function nombreCliente() {
 async function consultarAPI() {
     try {
         const res = await fetch(`${APP_URL}/api/servicios`);
+        if (!res.ok) throw new Error(`Error ${res.status}`);
         const servicios = await res.json();
         mostrarServicios(servicios);
     } catch (error) {
         console.error(error);
     }
 }
+
 
 function mostrarServicios(servicios) {
     const contenedor = document.querySelector('#servicios');

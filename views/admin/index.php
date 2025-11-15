@@ -1,3 +1,5 @@
+<?php ob_start(); ?> 
+
 <h1 class="nombre-pagina">Administración</h1>
 
 <?php include_once __DIR__ . "/../templates/barra.php"; ?>
@@ -68,3 +70,7 @@
         });
     });
 </script>
+
+<?php $contenido = ob_get_clean(); ?> 
+
+<?php include_once __DIR__ . "/../layout.php"; ?>

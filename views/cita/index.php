@@ -1,3 +1,4 @@
+<?php ob_start(); ?> 
 <h1 class="nombre-pagina">Crear Nueva Cita</h1>
 <p class="descripcion-pagina">Tus servicios y datos</p>
 
@@ -50,3 +51,7 @@ include_once __DIR__ . "/../templates/barra.php";
         <button id="siguiente" class="boton">Siguiente &raquo;</button>
     </div>
 </div>
+
+<?php $contenido = ob_get_clean(); ?> 
+
+<?php include_once __DIR__ . "/../layout.php"; ?>

@@ -1,3 +1,5 @@
+<?php ob_start(); ?> 
+
 <h1 class="nombre-pagina">Crear Cuenta</h1>
 <p class="descripcion-pagina">Llena el siguiente el formulario.</p>
 
@@ -68,3 +70,7 @@ include_once __DIR__ . "/../templates/alertas.php";
     <a href="<?= $_ENV['APP_URL']; ?>">¿Ya tienes una cuenta? Inicia Sesión</a>
     <a href="<?= $_ENV['APP_URL']; ?>olvide">¿Olvidaste tu password?</a>
 </div>
+
+<?php $contenido = ob_get_clean(); ?> 
+
+<?php include_once __DIR__ . "/../layout.php"; ?>

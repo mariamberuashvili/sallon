@@ -1,3 +1,4 @@
+<?php ob_start(); ?> 
 <h1 class="nombre-pagina">Actualizar Servicio</h1>
 <p class="descripcion-pagina">Modifica del formulario</p>
 
@@ -10,3 +11,7 @@ include_once __DIR__ . "/../templates/alertas.php";
     <?php include_once __DIR__ . "/formulario.php"; ?>
     <input type="submit" class="boton" value="Actualizar">
 </form>
+
+<?php $contenido = ob_get_clean(); ?> 
+
+<?php include_once __DIR__ . "/../layout.php"; ?>

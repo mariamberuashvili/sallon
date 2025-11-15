@@ -17,7 +17,7 @@ function ultimo(string $actual, string $proximo) : bool {
 
 function es_Auth() : void {
     if (!isset($_SESSION["login"])) {
-        header("Location: " . $_ENV['APP_URL']);
+       header('Location: ' . $_ENV['APP_URL'] . '/');
 
         exit;
     }
@@ -25,7 +25,7 @@ function es_Auth() : void {
 
 function es_Admin() : void {
     if (!isset($_SESSION["admin"])) {
-       header("Location: " . $_ENV['APP_URL']);
+      header('Location: ' . $_ENV['APP_URL'] . '/');
 
         exit;
     }

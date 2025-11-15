@@ -1,3 +1,6 @@
+<?php ob_start(); ?> 
+
+
 <h1 class="nombre-pagina">Servicios</h1>
 <p class="descripcion-pagina">Administración de Servicios</p>
 
@@ -14,12 +17,17 @@ include_once __DIR__ . "/../templates/barra.php";
             <div class="acciones">
                 <a class="boton" href="<?= $_ENV['APP_URL']; ?>/servicios/actualizar?id=<?= $servicio->id; ?>">Actualizar</a>
 
-                <form action="<?= $_ENV['APP_URL']; ?>/servicios/eliminar" method="POST">
+                <form action="servicios/eliminar" method="POST">
                     <input type="hidden" name="id" value="<?= $servicio->id; ?>">
-                    <input type="submit" value="Borrar" class="boton-eliminar">
+                    <input type="submit" value="Eliminar" class="boton-eliminar">
                 </form>
 
             </div>
         </li>
     <?php } ?>
 </ul>
+
+
+<?php $contenido = ob_get_clean(); ?> 
+
+<?php include_once __DIR__ . "/../layout.php"; ?>

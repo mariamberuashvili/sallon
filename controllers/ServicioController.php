@@ -36,7 +36,7 @@ class ServicioController
             if (empty($alertas)) {
                 $resultado = $servicio->guardar();
                 if ($resultado) {
-                    header('Location: ' . $_ENV['APP_URL'] . '/servocios');
+                    header('Location: ' . $_ENV['APP_URL'] . '/servicios');
                     exit;
                 }
             }
@@ -57,7 +57,7 @@ class ServicioController
         $id = $_GET['id'] ?? null;
 
         if (!$id || !is_numeric($id)) {
-            header('Location: ' . $_ENV['APP_URL'] . '/servocios');
+            header('Location: ' . $_ENV['APP_URL'] . '/servicios');
             exit;
         }
 
@@ -70,7 +70,7 @@ class ServicioController
 
             if (empty($alertas)) {
                 $servicio->guardar();
-                header('Location: ' . $_ENV['APP_URL'] . '/servocios');
+                header('Location: ' . $_ENV['APP_URL'] . '/servicios');
                 exit;
             }
         }
@@ -81,4 +81,28 @@ class ServicioController
             'alertas' => $alertas
         ]);
     }
+
+public static function eliminar(Router $router = null)
+{
+    session_start();
+    es_Admin(); // si quieres controlar permisos
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $id = $_POST['id'] ?? null;
+        if (!$id) {
+            header('Location: ' . $_ENV['APP_URL'] . '/servicios');
+            exit;
+        }
+
+        $servicio = Servicio::find($id);
+        if ($servicio) {
+            $servicio->eliminar(); // Método del modelo
+        }
+
+        header('Location: ' . $_ENV['APP_URL'] . '/servicios');
+        exit;
+    }
+}
+
+
 }

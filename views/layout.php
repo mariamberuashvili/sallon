@@ -10,21 +10,22 @@
 
 <body>
     <div class="contenedor-app">
-        <div class="imagen"></div>
+
+        <div class="imagen"></div> <!-- Siempre a la izquierda en desktop -->
 
         <div class="app">
-            <?= $contenido ?? '' ?>
+            <?= $contenido ?? '' ?> <!-- Aquí se carga el contenido de login.php -->
 
             <footer class="footer">
                 <p>© <?= date('Y'); ?> Salón</p>
             </footer>
         </div>
+
     </div>
 
     <script>
         const APP_URL = "<?= $_ENV['APP_URL']; ?>";
     </script>
-
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="<?= $_ENV['APP_URL']; ?>/build/js/buscador.js"></script>
     <script src="<?= $_ENV['APP_URL']; ?>/build/js/app.js"></script>
