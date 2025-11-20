@@ -39,5 +39,5 @@ Incluye registro, login, recuperación de contraseña, administración de servic
 
 ### 1️⃣ Clonar el repositorio
 ```bash
-git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git clone https://github.com/mariamberuashvili/sallon
 cd TU_REPOSITORIO
