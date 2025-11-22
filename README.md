@@ -40,4 +40,4 @@ Incluye registro, login, recuperación de contraseña, administración de servic
 ### 1️⃣ Clonar el repositorio
 ```bash
 git clone https://github.com/mariamberuashvili/sallon
-cd TU_REPOSITORIO
+cd sallon

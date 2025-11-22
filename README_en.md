@@ -31,4 +31,4 @@ Built with **PHP (custom MVC)**, **MySQL**, **JavaScript**, **SCSS** and **Gulp*
 1. Clone the repository:
 ```bash
 git clone https://github.com/mariamberuashvili/sallon
-cd YOUR_REPO
+cd sallon
